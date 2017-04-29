@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
 
-* [编程类](编程类/README.md)
-  * [Underscore](编程类/UNDERSCORE.md)
+* [编程类](Programming/README.md)
+  * [Underscore](Programming/UNDERSCORE.md)
 
-* [设计类](设计类/README.md)
+* [设计类](Design/README.md)
 
-* [如何做菜](如何做菜/README.md)
+* [如何做菜](Cooking/README.md)

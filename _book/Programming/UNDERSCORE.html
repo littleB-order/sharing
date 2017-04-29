@@ -1,0 +1,398 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Underscore · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Design/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    编程类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="UNDERSCORE.html">
+            
+                <a href="UNDERSCORE.html">
+            
+                    
+                    Underscore
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Design/">
+            
+                <a href="../Design/">
+            
+                    
+                    设计类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cooking/">
+            
+                <a href="../Cooking/">
+            
+                    
+                    如何做菜
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Underscore</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="json-&#x7528;&#x6CD5;&#xFF1A;">JSON &#x7528;&#x6CD5;&#xFF1A;</h1>
+<h2 id="format">Format:</h2>
+<pre><code class="lang-json">    {
+    &#x201C;key&#x201D; : value ,
+    &#x201C;key&#x201D; : value ,
+    &#x201C;key&#x201D; : [{
+         &#x201C;key&#x201D; : value,
+         &#x201C;key&#x201D; : value
+         }]
+    }
+</code></pre>
+<p>JS&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">obj = <span class="hljs-built_in">JSON</span>.parse(data)
+data =
+    &#x201C;key&#x201D;&#xFF1A;value&#xFF0C;
+    &#x201C;key&#x201D;&#xFF1A;value
+data= []
+data.push(&#x201C;key&#x201D;,value)
+<span class="hljs-built_in">JSON</span>.stringify (data)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x7528;<code>obj[&#x201C;key&#x201D;]</code>&#x8D4B;&#x503C;/&#x53D6;&#x503C;</p>
+<p>Java&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-java">JsonNode json = Json.parse(data);
+Json.get(&#x201C;key&#x201D;);
+ObjectNode node = Json.newObject();
+node.put(&#x201C;key&#x201D;,value);
+<span class="hljs-keyword">return</span> ok(node);
+</code></pre>
+<p>SCALA &#x6A21;&#x677F;</p>
+<pre><code class="lang-java"><span class="hljs-function">Result <span class="hljs-title">ok</span><span class="hljs-params">(views.html.xxx.render(input)</span>)</span>;
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-type">CONTENT</span>:content.scala.html
+@(input : <span class="hljs-type">Type</span>)
+<span class="hljs-meta">@import</span> java.util.<span class="hljs-type">Date</span>; <span class="hljs-keyword">var</span> count=<span class="hljs-number">0</span>;
+<span class="hljs-meta">@layout</span>(inputForLayout,inputForLayout&#x2026;&#x2026;) {
+    <span class="hljs-meta">@for</span>( dish &lt;- dishes ) {
+        <span class="hljs-meta">@if</span>(<span class="hljs-literal">true</span>) {
+    &lt;div&gt;&lt;/div&gt;
+        } <span class="hljs-keyword">else</span> {
+            &lt;p&gt;&lt;/p&gt;
+        }
+}
+    &lt;script&gt;
+        window.data = &#x201C;<span class="hljs-meta">@jsonString</span>&#x201D;;
+    &lt;/script&gt;
+}
+
+
+<span class="hljs-type">LAYOUT</span>:layout.scala.html
+
+@(inputForLayout:<span class="hljs-type">Type</span>,inputForLayout:<span class="hljs-type">Type</span>&#x2026;&#x2026;)(content:<span class="hljs-type">Html</span>)
+
+    <span class="hljs-meta">@content</span>
+</code></pre>
+<p>&#x7FFB;&#x8BD1;&#xFF1A;</p>
+<p><code>Javascripts</code>
+<code>lang.coffee</code>
+&#x65B9;&#x6CD5;&#xFF1A;<code>switchLan&#xFF08;&#xFF09;</code>&#xFF0C;<code>getLang&#xFF08;&#xFF09;</code>,<code>loadLang()</code>&#x2026;&#x2026;</p>
+<pre><code class="lang-coffeescript">translation.coffee
+&#x201C;title&#x201D;
+&#x201C;en&#x201D; : &#x201C;Title&#x201D;
+&#x201C;zh-CN&#x201D; : &#x201C;&#x6807;&#x9898;&#x201D;
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#x201C;lang&#x201D;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&#x201C;title&#x201D;</span>&gt;</span>empty<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<p>Java&#xFF1A;</p>
+<pre><code class="lang-java">Lang.<span class="hljs-function">java
+<span class="hljs-title">Lang</span><span class="hljs-params">(&#x201C;title&#x201D;)</span>.<span class="hljs-title">get</span><span class="hljs-params">(&#x201C;en&#x201D;)</span></span>;
+String lang = Lang.getLang();
+Lang.get(&#x201C;title&#x201D;,&#x201D;en&#x201D;);
+</code></pre>
+<p>&#x6570;&#x636E;&#x5E93;&#xFF1A;</p>
+<pre><code class="lang-java">Dish.java:
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Finder&lt;Integer, Dish&gt; find = <span class="hljs-keyword">new</span> Finder&lt;Integer, Dish&gt;(Integer.class, Dish.class);
+access:
+Dish dish = Dish.find.byId(id);
+Dish dish = Dish.find.where().eq(&#x201C;name&#x201D;,name).nq().gt().findUnique();
+List&lt;Dish&gt; dish = Dish.find.where().eq(&#x201C;name&#x201D;,name).nq().gt().orderBy(&#x201C;sort&#x201D;).findList();
+</code></pre>
+<p>&#x627E;&#x5230;&#x540E;&#x8981;&#x68C0;&#x67E5;&#x662F;&#x5426;valid</p>
+<pre><code class="lang-java"><span class="hljs-keyword">if</span> (dish==<span class="hljs-keyword">null</span>)(&#x6216;&#x5176;&#x4ED6;)
+    <span class="hljs-keyword">return</span> ok(fail message);
+</code></pre>
+<p>&#x5411;&#x540E;&#x53F0;&#x4F20;&#x6570;&#x636E;&#xFF1A;</p>
+<p>html&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;url &quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">onsubmit</span>=<span class="hljs-string">&apos;return ValidateForm(this);&apos;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x201D;key&#x201D;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>ajax:</p>
+<pre><code class="lang-coffeescript">$.get
+   post
+
+  data: {
+&#x201C;key&#x201D; : value
+&#x201C;key&#x201D; : value
+
+}
+</code></pre>
+<p>java&#x83B7;&#x53D6;data&#xFF1A;</p>
+<pre><code class="lang-java">DynamicForm in = Form.form().bindFromRequest();
+&#x2026; = in.get(&#x201C;key&#x201D;);
+</code></pre>
+<p>CSS&#x89C4;&#x8303;&#xFF1A;
+Class&#x547D;&#x540D;&#xFF1A;&#x201C;menuMiddleBoxZY&#x201D; &#x7ED3;&#x5C3E;&#x653E;&#x540D;&#x5B57;&#x9996;&#x5B57;&#x6BCD;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 编程类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Design/" class="navigation navigation-next " aria-label="Next page: 设计类">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Underscore","level":"1.2.1","depth":2,"next":{"title":"设计类","level":"1.3","depth":1,"path":"Design/README.md","ref":"Design/README.md","articles":[]},"previous":{"title":"编程类","level":"1.2","depth":1,"path":"Programming/README.md","ref":"Programming/README.md","articles":[{"title":"Underscore","level":"1.2.1","depth":2,"path":"Programming/UNDERSCORE.md","ref":"Programming/UNDERSCORE.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Programming/UNDERSCORE.md","mtime":"2017-04-29T10:09:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-29T10:46:15.801Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
