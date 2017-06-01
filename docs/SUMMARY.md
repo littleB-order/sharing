@@ -4,7 +4,5 @@
 
 * [编程类](Programming/README.md)
   * [Underscore](Programming/UNDERSCORE.md)
+  * [Markdown](Programming/MARKDOWN.md)
 
-* [设计类](Design/README.md)
-
-* [如何做菜](Cooking/README.md)
